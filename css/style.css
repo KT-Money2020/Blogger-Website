@@ -2,6 +2,8 @@
 
 @import url('../css/fonts.css'); /*Importing the fonts downloaded from another css file*/
 
+
+
 /*--------------Default declaration for every website project------------*/
 html,body{
     margin: 0%;
@@ -9,6 +11,8 @@ html,body{
     overflow-x:hidden;
 }
 /*------x-------Default declaration for every website project-----x-------*/
+
+
 
 
 /* -----------Css Variable ----------------------------*/
