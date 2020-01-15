@@ -10,7 +10,11 @@ html,body{
 /*------x-------Default declaration for every website project-----x-------*/
 
 
+<<<<<<< HEAD
 /* -----------Css Variable ----------------------------*/
+=======
+/* -----------------------Css Variable ----------------------------*/
+>>>>>>> origin/master
 
 :root{/*To call onto a variable, do 'font-family: var(--Abel)'*/
     /* theme font-family */
