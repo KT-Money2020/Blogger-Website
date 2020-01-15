@@ -66,10 +66,13 @@ ul{/*edits all unordered list */
 .nav{/*To set the overall height of the nav box*/
     background: white;
     padding: 0 2rem;
-    min-height:10vh;/*This is the main height of the entire nav content. set a a MINIMUM height of 10vh*/
+    min-height:6.5vh;/*This is the main height of the entire nav content. set as a MINIMUM height of 10vh*/
     /*min-height typically should expand on its own when additional list items are added*/
+    /*In addition to that at 6.5vh is perfect so that the content are completely hidden when you hover over the hidden content when the 3 line bar appears*/
     height: 0rem;/*This is an additional height that can be added on to the "minimum height of 10vh"*/
     overflow: hidden;
+
+     transition: height 1s ease-in-out;/*Add a height transition so that if there are changes in the height this will activate*/
 }
 
 .nav .nav-menu{/*Edit the content and spread it apart*/
@@ -102,7 +105,7 @@ ul{/*edits all unordered list */
 }
 
 .nav .nav-items{/*editing list content*/
-    display:flex;/*precondition list to flex settingd and align as a row */     
+    display:flex;/*precondition list to flex setting and align as a row */     
     margin:0;
 }
 
@@ -146,7 +149,7 @@ ul{/*edits all unordered list */
 
 
 
-/* Viewport less than or equal to 750px */
+/* Viewport less than or equal to 750px Horizontally */
 
 @media only screen and (max-width:750px){/*If the overall viewport is less than or equal to 750 then these commands will apply*/
     .nav .nav-menu, .nav .nav-items{/*targets both the .nav-menu and also .nav-items*/
