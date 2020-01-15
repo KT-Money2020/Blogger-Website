@@ -1,0 +1,164 @@
+
+
+@import url('../css/fonts.css'); /*Importing the fonts downloaded from another css file*/
+
+/*--------------Default declaration for every website project------------*/
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x:hidden;
+}
+/*------x-------Default declaration for every website project-----x-------*/
+
+
+/* -----------Css Variable ----------------------------*/
+
+:root{/*To call onto a variable, do 'font-family: var(--Abel)'*/
+    /* theme font-family */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend',cursive;
+    --Livvic:'Livvic',cursive;
+
+    /* Theme colors */
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+    /* gradient color */
+    --sky: linear-grdient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+/* ------x--------Css Variable ---------------x------------*/
+
+
+
+/*------------------- Global Classes --------------------*/
+
+a{/*To style all the anchor tags globally*/
+    text-decoration: none;/*removes the blue umderline from all anchor link*/
+    color: var(--text-gray);
+}
+
+.flex-row{/*Makes flex accessible and to be used as many times as you want*/
+    display: flex;/*Precondition it to flex setting*/
+    flex-direction: row;/*Cause content inside nav div box to be displayed as a row(laid out in a line)*/
+    flex-wrap:wrap;/*Causes the content overall BOX(ex:not individual list items) to collapse and be responsive when window is minimized*/
+}
+
+ul{/*edits all unordered list */
+    list-style-type:none;/*gets rid of bulleted points*/
+}
+
+/*---------x--------- Global Classes ----------x---------*/
+
+
+
+/*------------------- navbar --------------------*/
+
+.nav{/*To set the overall height of the nav box*/
+    background: white;
+    padding: 0 2rem;
+    min-height:10vh;/*This is the main height of the entire nav content. set a a MINIMUM height of 10vh*/
+    /*min-height typically should expand on its own when additional list items are added*/
+    height: 0rem;/*This is an additional height that can be added on to the "minimum height of 10vh"*/
+    overflow: hidden;
+}
+
+.nav .nav-menu{/*Edit the content and spread it apart*/
+    justify-content: space-between;/*Spreading out the content*/
+}
+
+.nav .toggle-collapse{/*The entire box around everything of the bar icon*/
+    position:absolute;/*bar stays in absolute position*/
+    top:0%;/*no spacing top*/
+    width:90%;/*Specify how far to the right the bar should be spaced*/
+    cursor: pointer;/*the mouse turns to a point when hovered over*/
+    display: none;/*The three line bar does not display until certain size*/
+}
+
+.nav .toggle-collapse .toggle-icons{/*The box around the three line icon*/
+    display: flex;/*Sets up content to be ready for flex commands*/
+    justify-content: flex-end; /*flex command to position it at the far right of every other content*/
+    padding: 1.7rem 0;/*add padding to top and bottom*/
+}
+
+.nav .toggle-collapse .toggle-icons i{/*The individual bar lines itself*/
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{/*This is basically just placed here as a variable to be used by the jquery function commaned*/
+    height: 30rem;/*when menu is opened this is how much content hidden should be revealed*/
+    /*10 rem = 10% of the page height content should be shown. 30 = 30% ect*/
+    /*For best quality do only 30%*/
+}
+
+.nav .nav-items{/*editing list content*/
+    display:flex;/*precondition list to flex settingd and align as a row */     
+    margin:0;
+}
+
+.nav .nav-items .nav-link{/*edit the individual items list*/
+    padding: 1.6rem 1rem; /*Adds padding to make it look like a real menu*/
+    font-size : 1.1rem;/* changes to the item list font size */
+    position: relative;/*would go with the flow positioning if there is no padding or margin additions, else it only adds onto the additional margin and padding*/
+    font-family:var(--Abel);
+    font-size:1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{/*When you hover over the links the background changes color */
+    background-color:var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{ /* When you hover over text the anchor tag changes color */
+    color:var(--white);
+}
+
+.nav .nav-brand a{ /*To style the 'Blogger' logo*/
+    font-size: 1.6rem;/*Increasing the size of the site name logo 'Blogger'*/
+    padding: 1rem 0;/*adds padding to the 'Blogger' logo*/
+    display: block;/*Takes up the full width available*/
+    font-family: var(--Lexend); /* Calls on a css variable and changes the logo to 'Abel' font that was imported*/
+
+}
+
+.nav .social{/*Edit the social media icons*/
+    padding: 1.4rem 0; /* padding for the icons*/
+}
+
+.nav .social i{/*Add changes to the social media icons */
+    padding: 0 .2rem;/*Add padding to both left and right of each icon*/
+}
+
+.nav .social i:hover{/*chances to the social icons when you hover over*/
+    color: #a1c4cf;/* changes the color of icon when hovered over */
+}
+
+/*---------x--------- navbar ------------x-------*/
+
+
+
+/* Viewport less than or equal to 750px */
+
+@media only screen and (max-width:750px){/*If the overall viewport is less than or equal to 750 then these commands will apply*/
+    .nav .nav-menu, .nav .nav-items{/*targets both the .nav-menu and also .nav-items*/
+       flex-direction: column;/*the content inside nav div box will become stacked upon each other and form(and also list items)a column as early as a max width of 750px*/ 
+    }
+    
+    .nav .toggle-collapse{
+        display: initial; /* once screen is  <= 750 than display initial content*/
+    }
+
+}
+
+/* x   Viewport less than or equal to 750px    x     */
+
+
+
+
+
