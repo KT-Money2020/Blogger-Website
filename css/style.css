@@ -32,7 +32,7 @@ html,body{
     --midnight:#104f55;
 
     /* gradient color */
-    --sky: linear-grdient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
 }
 
@@ -55,6 +55,29 @@ a{/*To style all the anchor tags globally*/
 
 ul{/*edits all unordered list */
     list-style-type:none;/*gets rid of bulleted points*/
+}
+
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn{
+     border:none;
+     border-radius: 2rem;
+     padding: 1rem 3rem;
+     font-size: 1rem;
+     font-family: var(--Livvic);
+     cursor: pointer;
 }
 
 /*---------x--------- Global Classes ----------x---------*/
@@ -146,6 +169,55 @@ ul{/*edits all unordered list */
 }
 
 /*---------x--------- navbar ------------x-------*/
+
+
+
+
+/*---------------------Main Content--------------------------*/
+
+
+
+/*---------------Site Title------------------*/
+
+main .site-title{
+    background: url(../assets/Background-image.png);
+    background-size: cover;
+    height: 110vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;/*The reason why you shouldnt use margin is because 
+    the content of ".site-background" are inside the box of a CENTERERED ".site-title" there it 
+    would be more logical to use padding*/
+    text-align: center;
+    color:var(--white);
+}
+
+main .site-title h1,h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background:var(--sky);
+
+}
+
+main .site-title .btn:hover{
+    background:transparent;
+    border: 1px solid var(--white);
+    color:var(--white);
+}
+
+/*-------x-------Site Title---------x---------*/
+
+
+
+
+/*---------x-----------Main Content-------------x------------*/
 
 
 
