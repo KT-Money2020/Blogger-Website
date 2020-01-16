@@ -11,6 +11,9 @@ $(document).ready(function(){
         $nav.toggleClass('collapse');//When activated then the .nav class will toggle to the '.collapse' class(minimize the entire content)
     })
 
+    //owl-carousel for blog
+    $('.owl-carousel').owlCarousel();
+    
 });
 
 

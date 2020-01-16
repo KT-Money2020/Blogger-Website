@@ -215,6 +215,20 @@ main .site-title .btn:hover{
 /*-------x-------Site Title---------x---------*/
 
 
+/*---------------------Blog Carousel-----------------------------*/
+
+main .blog{
+    background:url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    height: 100vh;
+    width: 100%;
+}
+
+/*-----------x---------Blog Carousel--------------x--------------*/
+
+
+
 
 
 /*---------x-----------Main Content-------------x------------*/
