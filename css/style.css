@@ -179,35 +179,35 @@ button.btn{
 
 /*---------------Site Title------------------*/
 
-main .site-title{
-    background: url(../assets/Background-image.png);
+main .site-title{/*---Outer box of the "Site-title" section-------------*/
+    background: url(../assets/Background-image.png);/*background of the site title*/
     background-size: cover;
     height: 110vh;
 
-    display: flex;
-    justify-content: center;
+    display: flex;/*Precondition it to flex setting*/
+    justify-content: center;/*Does not center the text but the box holding the text and its content*/
 }
 
 main .site-title .site-background{
     padding-top: 10rem;/*The reason why you shouldnt use margin is because 
     the content of ".site-background" are inside the box of a CENTERERED ".site-title" there it 
     would be more logical to use padding*/
-    text-align: center;
+    text-align: center;/*Aligns the text within the box to the center*/
     color:var(--white);
 }
 
-main .site-title h1,h3{
+main .site-title h1,h3{/*adding statements to the h1 and h3 for the site-title*/
     margin: .3rem;
 }
 
-main .site-title .btn{
-    margin: 1.8rem;
+main .site-title .btn{/*modifying the button of the site title*/
+    margin: 1.8rem; /*adding margins outside of the button*/
     background:var(--sky);
 
 }
 
-main .site-title .btn:hover{
-    background:transparent;
+main .site-title .btn:hover{/*execute commands when mouse is hovered over button*/
+    background:transparent;/*causes the button to become transparent in color when hovered over*/
     border: 1px solid var(--white);
     color:var(--white);
 }
@@ -217,12 +217,21 @@ main .site-title .btn:hover{
 
 /*---------------------Blog Carousel-----------------------------*/
 
-main .blog{
+main .blog{/*Mostly just to put a background image for the carousel feature*/
     background:url('../assets/Abract01.png');
     background-repeat: no-repeat;
-    background-position:right;
-    height: 100vh;
-    width: 100%;
+    background-position:right;/*position the image to the right*/
+    height: 100vh;/* 100 viewport height of the screen*/
+    width: 100%;/*100 width of the screen*/
+}
+
+main .blog .blog-post{
+    padding-top:6rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
 }
 
 /*-----------x---------Blog Carousel--------------x--------------*/
