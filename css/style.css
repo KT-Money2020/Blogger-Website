@@ -229,7 +229,7 @@ main .blog .blog-post{/*Adjustments for innerbox of carousel*/
     padding-top:6rem;/*adding top padding for innerbox*/
 }
 
-main .blog-post .blog-content{/*Adjustment for the first content item*/
+main .blog-post .blog-content{/*Adjustment for the content items*/
     display: flex;/*preconditioning the content to a flex*/
     flex-direction: column;/*make this content item be displayed in the direction of a column*/
 
@@ -237,6 +237,22 @@ main .blog-post .blog-content{/*Adjustment for the first content item*/
     width: 80%;/*Make the item box with its image and content be 80% in width*/
     margin: 3rem 2rem;/*3 rem top and bottom 2 rem left and right*/
     
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);/* Add a box shadow to the first content item*/
+}
+
+main .blog-content .blog-title{/*directing location of the blogs title*/
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{/*editiing the button of the blogs*/
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{/*here you are displaying the "2 minutes" text as block so that it has the whole space to itself
+    and not placed on the right side of the button*/
+    display: block;/*give it some space as a box*/
 }
 
 /*-----------x---------Blog Carousel--------------x--------------*/
