@@ -225,13 +225,18 @@ main .blog{/*Mostly just to put a background image for the carousel feature*/
     width: 100%;/*100 width of the screen*/
 }
 
-main .blog .blog-post{
-    padding-top:6rem;
+main .blog .blog-post{/*Adjustments for innerbox of carousel*/
+    padding-top:6rem;/*adding top padding for innerbox*/
 }
 
-main .blog-post .blog-content{
-    display: flex;
-    flex-direction: column;
+main .blog-post .blog-content{/*Adjustment for the first content item*/
+    display: flex;/*preconditioning the content to a flex*/
+    flex-direction: column;/*make this content item be displayed in the direction of a column*/
+
+    text-align: center;
+    width: 80%;/*Make the item box with its image and content be 80% in width*/
+    margin: 3rem 2rem;/*3 rem top and bottom 2 rem left and right*/
+    
 }
 
 /*-----------x---------Blog Carousel--------------x--------------*/
