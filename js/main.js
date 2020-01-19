@@ -12,7 +12,16 @@ $(document).ready(function(){
     })
 
     //Calls on the "owl-carousel" class and activate the owlCarousel feature
-    $('.owl-carousel').owlCarousel();
+    $('.owl-carousel').owlCarousel({
+        loop:true,//makes the carousel default at looping
+        autoplay:true, //makes carousel default at autoplaying
+
+        autoplayTimeout: 3000,//sets the autoplay loop change every 3 second
+        dots: false,//remove the default dots navigation 
+
+        nav:true,//Enables mini navigation arrows at the bottom. It also is invisible as a "owl-nav" class
+        navText:[$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')]
+    });
     
 });
 

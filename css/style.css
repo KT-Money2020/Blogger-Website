@@ -80,6 +80,14 @@ button.btn{
      cursor: pointer;
 }
 
+span{/*mostly to target brief description*/
+    font-family: var(--Abel);
+}
+
+.container{/*The outter box that holds everything including the innerbox(with all the content) together*/
+    margin: 0 5vw;/*Adds some spacing for the left and right spacing*/
+}
+
 /*---------x--------- Global Classes ----------x---------*/
 
 
@@ -223,6 +231,7 @@ main .blog{/*Mostly just to put a background image for the carousel feature*/
     background-position:right;/*position the image to the right*/
     height: 100vh;/* 100 viewport height of the screen*/
     width: 100%;/*100 width of the screen*/
+    background-size: 65%;
 }
 
 main .blog .blog-post{/*Adjustments for innerbox of carousel*/
@@ -235,6 +244,8 @@ main .blog-post .blog-content{/*Adjustment for the content items*/
 
     text-align: center;
     width: 80%;/*Make the item box with its image and content be 80% in width*/
+    /*the reason for why you cant do 100% and get 100% of the entire screen is because it is already set up to have a specific
+    maximum size from the imported carousel*/
     margin: 3rem 2rem;/*3 rem top and bottom 2 rem left and right*/
     
     box-shadow: 0 15px 20px rgba(0,0,0,0.2);/* Add a box shadow to the first content item*/
@@ -255,10 +266,44 @@ main .blog-content span{/*here you are displaying the "2 minutes" text as block 
     display: block;/*give it some space as a box*/
 }
 
+section .container .owl-nav{
+    position: absolute;
+    top:0%;/*Reseting its position to 0*/
+    margin:0 auto;/*Reseting its position to 0*/
+    width:100%;/*specifies the padding area*/
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color:var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{/*Anything with the starting name of "owl-" that is hovered over will apply these changes*/
+    background:transparent;
+    color:var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-']{/*Anything with the starting name of "owl-" will apply these changes*/
+    outline:none;
+}
+
+
+
 /*-----------x---------Blog Carousel--------------x--------------*/
 
+/*--------------------------Site content-----------------------------*/
 
+main .site-content{
+    display: grid;
+    grid-template-columns: 70% 30%; /* Takes up 70% width for Blog post and 30% width for sidebar*/
+}
 
+main .post-content{
+    margin-bottom: 5rem;
+}
+/*------------x------------Site content-------------x------------------*/
 
 
 /*---------x-----------Main Content-------------x------------*/
