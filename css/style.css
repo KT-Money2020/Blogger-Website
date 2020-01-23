@@ -88,6 +88,10 @@ span{/*mostly to target brief description*/
     margin: 0 5vw;/*Adds some spacing for the left and right spacing*/
 }
 
+.text-gray{
+    color: var(--text-gray);
+}
+
 /*---------x--------- Global Classes ----------x---------*/
 
 
@@ -143,7 +147,9 @@ span{/*mostly to target brief description*/
 .nav .nav-items .nav-link{/*edit the individual items list*/
     padding: 1.6rem 1rem; /*Adds padding to make it look like a real menu*/
     font-size : 1.1rem;/* changes to the item list font size */
-    position: relative;/*would go with the flow positioning if there is no padding or margin additions, else it only adds onto the additional margin and padding*/
+    position: relative;/*By setting it to relative, if you did not add any padding or margin to it,
+    it would be positioned at its default place(like a patty being stacked on a burger one by one). And by adding "top" or "left" you would be positioning it relative to its 
+    original position(like its original height is 50px by default then it would add 50px more if you decide to add 50px to ) */
     font-family:var(--Abel);
     font-size:1.1rem;
 }
@@ -295,14 +301,46 @@ section .container .owl-nav{
 
 /*--------------------------Site content-----------------------------*/
 
-main .site-content{
+main .site-content{/*The box that contains all the site content inclduing the post content*/
     display: grid;
     grid-template-columns: 70% 30%; /* Takes up 70% width for Blog post and 30% width for sidebar*/
 }
 
-main .post-content{
+main .post-content{/*The box that contains all the post content*/
+    width:100%;/*Gives the box its full width so text wont be too crowded*/
     margin-bottom: 5rem;
 }
+
+main .site-content .post-content > .post-image, .post-title{/* this is the info/date published title on top of the blog pictures*/
+    /*to understand the "greater than" sign go to 
+    https://stackoverflow.com/questions/4459821/css-selector-what-is-it
+    */
+    /*The reason for why you do the > is because is shorter to write and read rather than do
+    main .site-content .post-content > .post-image, 
+    main .site-content .post-content > .post-title;*/
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main .site-content .post-content > .post-image .post-info{/* You could shorten this code to "main .site-content .post-info but it would be harder to read and understand*/
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;/* the reason for why you need to do absolute position 
+    here is because its the only way for you to get it out of its box(in other words 
+    make it lay over or on top of the image)*/
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+
+main .site-content > .post-image > div{
+
+}
+
+main .site-content .post-content > .post-image .img{
+
+}
+
 /*------------x------------Site content-------------x------------------*/
 
 
