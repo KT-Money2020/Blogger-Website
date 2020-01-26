@@ -42,6 +42,9 @@ html,body{
 
 /*------------------- Global Classes --------------------*/
 
+/* These are pretty important to take note of and use for future projects 
+as well*/
+
 a{/*To style all the anchor tags globally*/
     text-decoration: none;/*removes the blue umderline from all anchor link*/
     color: var(--text-gray);
@@ -90,6 +93,11 @@ span{/*mostly to target brief description*/
 
 .text-gray{
     color: var(--text-gray);
+}
+
+p{
+    font-family:var(--Lexend);
+    color: var(--text-light);
 }
 
 /*---------x--------- Global Classes ----------x---------*/
@@ -333,15 +341,144 @@ main .site-content .post-content > .post-image .post-info{/* You could shorten t
     border-radius: 3rem;
 }
 
-main .site-content > .post-image > div{
-
+main .site-content .post-content > .post-image > div{
+    overflow: hidden;
 }
 
-main .site-content .post-content > .post-image .img{
+main .site-content .post-content > .post-image .img{/*the image of the blog*/
+    width:100%;/*gives it its real width according to its surroundings */
+    transition: all 1s ease;/* You should always have the transiton declared in 
+    the original class rather than at the ":hover"*/
+}
 
+main .site-content .post-content > .post-image .img:hover{/*When you hover over the image it will animate*/
+    transform: scale(1.3);
+}
+
+main .site-content .post-content > .post-image .post-info span{/*adding margin to the span tags inside the ".post-info" ckass*/
+    margin: 0.5rem;
+}
+
+main .post-content .post-title a{/*All the p tags inside the ".post-title" div class will have text changes done to them*/
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn{/*Add changes to the ".post-btn" class*/
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+
+.site-content .pagination{/* This is the "next page" numbers bar but its the 
+    entire box content of it*/
+    justify-content: center;
+    color:var(--text-gray);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a{/*this is targetting all numbers and content
+    within the "next page" box*/
+    padding: .6rem .9rem;
+    border-radius: 2rem;/*creates a round border so that when the a tag background is turn black it will be a round border*/
+    margin: 0.3rem;
+    font-family: var(--Lexend);
+}
+
+.site-content .pagination .pages{/*targetting the display of all a tags with the class of "pages"*/
+    background: var(--text-gray);
+    color: var(--white);
 }
 
 /*------------x------------Site content-------------x------------------*/
+
+
+
+
+
+
+/*-----------------------Sidebar---------------------------*/
+
+.site-content > .sidebar .category-list{ /* the entire content within the ".category-list" class */
+    font-family: var(--Livvic);
+}
+
+.site-content > .sidebar .category-list .list-items{ /*All the ".list-items" class will have a new change applied*/
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;/*This has to exist in order for justify-content to even work properly*/
+    justify-content: space-between;/*Put a space between the list items and the numbers*/
+}
+
+.site-content > .sidebar .category-list .list-items a{/*all the a tags in the list tags will have changes applied*/
+    color: black;
+}
+
+.site-content .sidebar .popular-post .post-content{
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2{/* adds a some spacing to the header*/
+    padding-top: 8rem;/
+}
+
+.site-content .sidebar .popular-post .post-info{/*modifies the dates and info of the "post-info" section*/
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1.5rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a{/*chnages to the Main title of post*/
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter{/*For editing the entire subscriber section*/
+    padding-top: 3rem;
+}
+
+.site-content .sidebar .newsletter .form-element{/*The user interface of the subscriber section*/
+    padding: .5rem .2rem;
+}
+
+.site-content .sidebar .newsletter .input-element{/*for editiing the input element*/
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: var(--Lexend);
+    font-size:1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn{/*For editing the subscriber button below the user input box*/
+    display: block;
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.site-content .sidebar .popular-tags{/*The entire "popular-tags" bar*/
+    padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+}
+
+
+/*---------x-------------Sidebar----------------x----------*/
+
+
+
+
+
 
 
 /*---------x-----------Main Content-------------x------------*/
