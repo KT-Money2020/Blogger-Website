@@ -422,7 +422,7 @@ main .post-content .post-title a{/*All the p tags inside the ".post-title" div c
 }
 
 .site-content .sidebar .popular-post h2{/* adds a some spacing to the header*/
-    padding-top: 8rem;/
+    padding-top: 8rem;
 }
 
 .site-content .sidebar .popular-post .post-info{/*modifies the dates and info of the "post-info" section*/
@@ -465,7 +465,7 @@ main .post-content .post-title a{/*All the p tags inside the ".post-title" div c
     padding: 5rem 0;
 }
 
-.site-content .sidebar .popular-tags .tags .tag{
+.site-content .sidebar .popular-tags .tags .tag{/*Each individual tags */
     background: var(--sky);
     padding: .4rem 1rem;
     border-radius: 3rem;
@@ -477,8 +477,48 @@ main .post-content .post-title a{/*All the p tags inside the ".post-title" div c
 
 
 
+/*------------------------Footer--------------------------*/
+
+footer.footer{/*The entire outer box of the footer*/
+    height: 100%;
+    background:var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{/*The innerbox of the footer with all its content*/
+    display: grid;/*Preconditions the footers content to be able to use grid features*/
+    grid-template-columns: repeat(4,1fr);/*four difference sections for the footer*/
+}
+
+footer.footer .container > div{/*Targetting all the divs*/
+    flex-grow: 1;/*Seting it to a 1 will cause the div contaiers to have equal outter spacing
+    and cause all the div to grow and take up all the available spaces*/
+    flex-basis: 0;/*Acts as a minimum-width but but doesnt create a bottom scroll bar*/
+    padding: 3rem .9rem;
+}
+
+footer.footer .container .about-us h2{
+    color:var(--white);
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
 
 
+
+/*------------x-----------Footer--------------x-----------*/
 
 
 /*---------x-----------Main Content-------------x------------*/
