@@ -22,6 +22,13 @@ $(document).ready(function(){
         nav:true,//Enables mini navigation arrows at the bottom. It also is invisible as a "owl-nav" class
         navText:[$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')]
     });
+
+    //click to scroll top
+    $('.move-up span').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        },3000);
+    })
     
 });
 
